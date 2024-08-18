@@ -1,0 +1,53 @@
+.tec-icon {
+  display: grid;
+  margin: 30px;
+  padding: 3% 5% 0 5%;
+  grid-auto-rows: min-content;
+  grid-template-rows: repeat(auto-fill, minmax(3.125rem, 1fr));
+  grid-template-columns: repeat(8, minmax(1.875rem, 3fr));
+  justify-content: center;
+  gap: 1.25rem;
+
+  div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+.icon {
+  min-width: 1.875rem;
+  max-height: 3.75rem;
+  size-adjust: auto;
+  justify-items: center;
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+  .tec-icon {
+  }
+}
+@media (max-width: 768px) {
+  .tec-icon {
+    grid-template-rows: repeat(2, minmax(3.125rem, 1fr));
+    grid-template-columns: repeat(4, minmax(1.875rem, 3fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .tec-icon {
+    grid-template-rows: repeat(4, minmax(3.125rem, 1fr));
+    grid-template-columns: repeat(2, minmax(1.875rem, 3fr));
+  }
+}
+
+@media (max-width: 320px) {
+  .tec-icon {
+  }
+}

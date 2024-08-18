@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  src: url(../assets/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf);
+}
+
+.header {
+  display: grid;
+  grid-auto-rows: min-content;
+  margin-top: 0;
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
+
+  place-items: top;
+
+  /* flex-direction: column;
+  justify-content: top;
+  align-items: center; */
+  width: 100%;
+  text-align: center;
+}
+.background {
+  display: grid;
+
+  width: 100%;
+
+  /* max-width: 100%;
+  padding-top: 0;
+  margin-top: 0; */
+  background-size: contain;
+  opacity: 0.3;
+}
+
+.avatar-container {
+  background-position: top;
+  position: relative;
+  width: 100%; /* Ajusta el tamaño según sea necesario */
+  height: auto; /* Ajusta el tamaño según sea necesario */
+}
+
+.avatar {
+  display: grid;
+  grid-template-rows: minmax(15rem, 1fr);
+  place-self: center;
+  position: absolute;
+  max-width: 50vw;
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.titulo {
+  display: grid;
+  grid-auto-columns: max-content;
+  place-self: center;
+  position: absolute;
+  padding-top: 40%;
+  max-width: 50vw;
+  font-size: 3rem;
+
+  color: #61dafb;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+  .titulo {
+    font-size: 1.75rem; /* Ajusta el tamaño del texto */
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.25rem; /* Ajusta el tamaño del texto */
+    padding-top: 35%;
+  }
+}
+
+@media (max-width: 320px) {
+  .titulo {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    padding-top: 30%;
+  }
+}
