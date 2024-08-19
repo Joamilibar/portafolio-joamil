@@ -17,69 +17,68 @@ body {
   margin-top: 0;
 }
 
-/* .background {
-  display: grid;
-
-  width: 100%;
-  background-size: contain;
-  opacity: 0.3;
-} */
-
 .container {
-  position: relative; /* Asegúrate de que el contenedor tenga una posición relativa */
+  position: relative;
   width: 100%;
-  height: 100vh; /* Ajusta la altura del contenedor según sea necesario */
+  height: 100vh;
 }
+
 .background {
+  display: grid;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegúrate de que la imagen de fondo cubra todo el contenedor */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
 }
 
 .overlay {
-  position: absolute; /* Coloca el overlay en una posición absoluta dentro del contenedor */
-  top: 50%; /* Centra verticalmente el overlay */
-  left: 50%; /* Centra horizontalmente el overlay */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Ajusta la posición para centrar el overlay */
-  text-align: center; /* Centra el contenido del overlay */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .avatar {
+  position: relative;
   max-width: 23.75rem;
   min-width: 10rem;
   padding: 2%;
   filter: drop-shadow(0 0 2em #61dafbaa);
+  z-index: 1;
 }
 
 .titulo {
   font-size: 1.5rem;
-  color: white; /* Ajusta el color del texto según sea necesario */
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-/* Media queries para diferentes tamaños de pantalla */
-@media (max-width: 1200px) {
-  .titulo {
-    font-size: 1.75rem; /* Ajusta el tamaño del texto */
-  }
-}
-
+/* Media queries para hacer el diseño responsive */
 @media (max-width: 768px) {
+  .avatar {
+    max-width: 380p;
+    min-width: 8rem;
+  }
+
   .titulo {
-    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .titulo {
-    font-size: 1.25rem; /* Ajusta el tamaño del texto */
+  .avatar {
+    max-width: 23.75rems;
+    min-width: 6rem;
   }
-}
 
-@media (max-width: 320px) {
   .titulo {
-    font-size: 1rem; /* Ajusta el tamaño del texto */
+    font-size: 1rem;
   }
 }
