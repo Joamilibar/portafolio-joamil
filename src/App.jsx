@@ -11,24 +11,29 @@ function App() {
 
   return (
     <>
-      {/* <Container fluid>
-        <Row>
+      <Container fluid>
+        <Row className="">
+          <Col></Col>
           <Col>
-            {" "}
-            <img src={fondo} alt="Fondo" className="background" />
-            <img src={avatar} alt="Avatar" className="avatar" />
-            <h1 className="titulo">Full Stack Developer</h1>
+            <div className="container">
+              <img src={fondo} alt="Fondo" className="background" />
+              <div className="overlay">
+                <img src={avatar} alt="avatar" className="avatar" />
+                <h1 className="titulo">Full Stack Developer</h1>
+              </div>
+            </div>
           </Col>
+          <Col></Col>
         </Row>
-      </Container> */}
+      </Container>
 
-      <div className="header">
+      {/* <div className="header">
         <div className="container">
           <img src={fondo} alt="Fondo" className="background" />
           <img src={avatar} alt="Avatar" className="avatar" />
           <h1 className="titulo">Full Stack Developer</h1>
         </div>
-      </div>
+      </div> */}
 
       {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

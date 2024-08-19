@@ -65,13 +65,14 @@
     grid-template-rows: repeat(2, minmax(3.125rem, 1fr));
     grid-template-columns: repeat(4, minmax(1.875rem, 3fr));
   }
-}
-
-@media (max-width: 480px) {
   .project {
     grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
     grid-template-columns: repeat(2, minmax(30rem, 2fr));
   }
+}
+
+@media (max-width: 480px) {
+  .
 }
 
 @media (max-width: 320px) {
