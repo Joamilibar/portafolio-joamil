@@ -19,7 +19,10 @@ function App() {
               <img src={fondo} alt="Fondo" className="background" />
               <div className="overlay">
                 <img src={avatar} alt="avatar" className="avatar" />
-                <h1 className="titulo">Full Stack Developer</h1>
+                <div className="titulo">
+                  <h1>Full Stack Developer</h1>
+                  <h2>Joamil Ibarra</h2>
+                </div>
               </div>
             </div>
           </Col>

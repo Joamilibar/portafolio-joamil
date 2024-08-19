@@ -1,7 +1,7 @@
 .tec-icon {
   display: grid;
   margin: 30px;
-  padding: 3% 5% 0 5%;
+  padding: 3% 5% 3% 5%;
   grid-auto-rows: min-content;
   grid-template-rows: repeat(auto-fill, minmax(3.125rem, 1fr));
   grid-template-columns: repeat(8, minmax(1.875rem, 3fr));
@@ -17,7 +17,7 @@
 
 .icon {
   min-width: 1.875rem;
-  max-height: 3.75rem;
+  max-height: 5rem;
   size-adjust: auto;
   justify-items: center;
   filter: drop-shadow(0.5rem 0.5rem 0.5rem black);

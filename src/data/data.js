@@ -11,32 +11,32 @@ export const projects = [
   },
   {
     "id": 2,
-    "title": "",
-    "subtitle": "",
-    "description": "",
-    "tecnologies": "",
-    "image": "https://",
-    "repositorie": "https://",
-    "www": "https://"
-  },
-  {
-    "id": 3,
-    "title": "",
-    "subtitle": "",
-    "description": "",
-    "tecnologies": "",
-    "image": "https://",
-    "repositorie": "https://",
-    "www": "https://"
-  },
-  {
-    "id": 4,
-    "title": "",
-    "subtitle": "",
-    "description": "",
-    "tecnologies": "",
-    "image": "https://",
-    "repositorie": "https://",
-    "www": "https://"
+    "title": "Carrito con React",
+    "subtitle": "Proyecto Final React",
+    "description": "Carrito creado con Recat y Firebase",
+    "tecnologies": "React, Firebase, Sass, Vite, Bootstrap",
+    "image": "https://raw.githubusercontent.com/Joamilibar/react-49905/main/src/assets/carrito.png",
+    "repositorie": "https://github.com/Joamilibar/react-49905.git",
+    "www": "https://react-cart-nine-rouge.vercel.app/"
   }
+  // {
+  //   "id": 3,
+  //   "title": "",
+  //   "subtitle": "",
+  //   "description": "",
+  //   "tecnologies": "",
+  //   "image": "https://",
+  //   "repositorie": "https://",
+  //   "www": "https://"
+  // },
+  // {
+  //   "id": 4,
+  //   "title": "",
+  //   "subtitle": "",
+  //   "description": "",
+  //   "tecnologies": "",
+  //   "image": "https://",
+  //   "repositorie": "https://",
+  //   "www": "https://"
+  // }
 ]
