@@ -3,25 +3,24 @@
   grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
   grid-template-columns: repeat(3, minmax(25rem, 2fr));
   background-color: rgba(59, 57, 53, 0.94);
-  border-radius: .9375rem;
-  padding: 5%;
-  margin: 1.25rem;
-  gap: 3.125rem;
+ 
+  padding: 3% 0 3% 0;
+  
+  gap: 1.875rem;
 }
 
 .project a {
   object-fit: contain;
   justify-self: center;
   align-self: center;
-  width: 28.125rem;
+  width: 25rem;
   background-color: #3e4e74;
   filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
   border-radius: 1.875rem;
+  gap: 1.25rem;
 }
 
-.project img {
-  object-fit: cover;
-}
+
 
 .project div {
   object-fit: cover;
@@ -76,7 +75,7 @@
 .link:hover {
   transform: scale(1.2);
  transition: transform 0.5s;
- filter: drop-shadow(0 0 1rem #61dafbaa)
+ filter: drop-shadow(0 0 1rem #61dafbaa);
  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
 
 }
@@ -98,7 +97,7 @@
     grid-template-columns: repeat(2, minmax(30rem, 2fr));
 
     a {
-      width: 22rem;
+      width: 20rem;
     }
 
     img {
