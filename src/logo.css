@@ -42,7 +42,7 @@ body {
 
 .avatar {
   position: relative;
-  max-width: 23.75rem;
+  max-width: 26.25rem;
   min-width: 10rem;
   padding: 2%;
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -73,7 +73,7 @@ body {
 /* Media queries para hacer el diseño responsive */
 @media (max-width: 768px) {
   .avatar {
-    max-width: 380p;
+    max-width: 23.75rem;
     min-width: 8rem;
   }
 
@@ -84,11 +84,20 @@ body {
 
 @media (max-width: 480px) {
   .avatar {
-    max-width: 23.75rems;
+    max-width: 21.25rem;
     min-width: 6rem;
+    padding: 5px;
   }
 
   .titulo {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .avatar {
+    max-width: 18.75rem;
+    min-width: 6rem;
+    padding: 5px;
   }
 }
