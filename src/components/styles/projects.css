@@ -1,12 +1,23 @@
 .project {
   display: grid;
-
+  background-color: rgba(59, 57, 53, 0.94);
   grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
   grid-template-columns: repeat(3, minmax(25rem, 2fr));
-  /* background-color: #f2efe9; */
+
   place-content: center;
-  margin: 1.25rem;
-  gap: 3.125rem;
+  padding: 1.25rem;
+  gap: 1.875rem;
+}
+.project a {
+  object-fit: contain;
+  justify-self: center;
+  width: 25rem;
+  background-color: #3e4e74;
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+  border-radius: 1.875rem;
+  gap: 0.9375rem;
+  border-radius: 1.25rem;
+  margin: 0.3125rem;
 }
 
 .project div {
@@ -18,9 +29,9 @@
   margin: 0.625rem;
 
   img {
-    padding: 2%;
     max-width: 18.75rem;
     min-width: 15rem;
+    border-radius: 0.9375rem;
   }
 
   h2 {
@@ -39,9 +50,38 @@
   }
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  padding: 0 36% 0 36%;
+}
+.button img {
+  object-fit: cover;
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+}
+.button img:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+  filter: drop-shadow(0 0 1rem #61dafbaa);
+}
+
+.link:hover {
+  transform: scale(1.2);
+  transition: transform 0.5s;
+  filter: drop-shadow(0 0 1rem #61dafbaa);
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+}
+
 /* Media queries para diferentes tamaños de pantalla */
 @media (max-width: 1200px) {
   .tec-icon {
+  }
+
+  .project {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
   }
 }
 
@@ -49,6 +89,15 @@
   .project {
     grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
     grid-template-columns: repeat(2, minmax(30rem, 2fr));
+
+    a {
+      width: 20rem;
+    }
+
+    img {
+      width: 16.875rem;
+      margin: 2%;
+    }
   }
 }
 
@@ -70,7 +119,7 @@
 
 @media (max-width: 480px) {
   .project {
-    grid-template-columns: repeat(1, minmax(13rem, 2fr));
+    grid-template-columns: repeat(1, minmax(13rem, 1fr));
   }
 }
 

@@ -36,9 +36,13 @@ function Projects() {
                           {project.www}
                         </p>
                         <h3>Github </h3>
-                        <span className="button">
-                          <img src={github} className="" alt="Logo GitHub" />
-                        </span>
+                        <div className="button-container">
+                          <img
+                            src={github}
+                            className="button link"
+                            alt="Logo GitHub"
+                          />
+                        </div>
                       </div>
                     </article>
                   </div>
