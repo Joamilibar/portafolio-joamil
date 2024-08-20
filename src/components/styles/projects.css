@@ -8,7 +8,7 @@
   padding: 1.25rem;
   gap: 1.875rem;
 }
-.project a {
+.card {
   object-fit: contain;
   justify-self: center;
   width: 25rem;
@@ -29,7 +29,7 @@
   margin: 0.625rem;
 
   img {
-    max-width: 18.75rem;
+    max-width: 16.875rem;
     min-width: 15rem;
     border-radius: 0.9375rem;
   }
@@ -56,7 +56,7 @@
   align-items: center;
 }
 .button {
-  padding: 0 36% 0 36%;
+  padding: 0 30% 0 30%;
 }
 .button img {
   object-fit: cover;
@@ -90,10 +90,6 @@
     grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
     grid-template-columns: repeat(2, minmax(30rem, 2fr));
 
-    a {
-      width: 20rem;
-    }
-
     img {
       width: 16.875rem;
       margin: 2%;
@@ -101,6 +97,9 @@
   }
 }
 
+.card {
+  width: 20rem;
+}
 @media (max-width: 920px) {
   .project {
     grid-template-columns: repeat(2, minmax(15rem, 1fr));
@@ -121,6 +120,7 @@
   .project {
     grid-template-columns: repeat(1, minmax(13rem, 1fr));
   }
+  .card;
 }
 
 @media (max-width: 360px) {

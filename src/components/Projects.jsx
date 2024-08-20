@@ -14,15 +14,21 @@ function Projects() {
           <Col>
             <div className="project">
               {projects.map((project) => (
-                <a key={project.image}>
+                <div
+                  className="card"
+                  key={project.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div>
                     <article className="article-items">
-                      <div>
+                      <div href={project.www} target="_blank">
                         <img
                           href={project.www}
                           src={project.image}
                           className="link"
                           alt="photo"
+                          target="_blank"
                         />
                       </div>
                       <div>
@@ -32,21 +38,33 @@ function Projects() {
                         <h3>Tecnologies </h3>
                         <p>{project.tecnologies}</p>
                         <h3> - www - </h3>
-                        <p href={project.www} className="link">
-                          {project.www}
-                        </p>
+                        <a href={project.www} target="_blank">
+                          {" "}
+                          <p href="" target className="link">
+                            {project.www}
+                          </p>
+                        </a>
                         <h3>Github </h3>
-                        <div className="button-container">
-                          <img
-                            src={github}
-                            className="button link"
-                            alt="Logo GitHub"
-                          />
+                        <div
+                          href={project.repositorie}
+                          className="button-container"
+                        >
+                          <Button
+                            href={project.repositorie}
+                            target="_blanc"
+                            className=" link"
+                          >
+                            <img
+                              src={github}
+                              className="button "
+                              alt="Logo GitHub"
+                            />
+                          </Button>
                         </div>
                       </div>
                     </article>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </Col>
