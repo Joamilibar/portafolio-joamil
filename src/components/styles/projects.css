@@ -1,34 +1,52 @@
 .project {
   display: grid;
-
   grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
   grid-template-columns: repeat(3, minmax(25rem, 2fr));
-  /* background-color: #f2efe9; */
-  place-content: center;
+  background-color: rgba(59, 57, 53, 0.94);
+  border-radius: .9375rem;
+  padding: 5%;
   margin: 1.25rem;
   gap: 3.125rem;
 }
 
+.project a {
+  object-fit: contain;
+  justify-self: center;
+  align-self: center;
+  width: 28.125rem;
+  background-color: #3e4e74;
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+  border-radius: 1.875rem;
+}
+
+.project img {
+  object-fit: cover;
+}
+
 .project div {
+  object-fit: cover;
   place-content: center;
   text-align: center;
-
-  color: #61dafb;
-  /* position: relative; */
-  margin: 0.625rem;
+  color: #a6c2cb;
 
   img {
-    padding: 2%;
-    max-width: 18.75rem;
-    min-width: 15rem;
+    object-fit: cover;
+
+    margin: 5% 1% 1% 1%;
+    max-width: 23.75rem;
+    min-width: 13.75rem;
+    border-radius: 1.875rem;
   }
 
   h2 {
+    font-weight: bold;
+    text-transform: uppercase; ;
     font-size: 1.5rem;
     font-weight: 700;
   }
 
   h3 {
+    
     font-size: 1.2rem;
     font-weight: 700;
   }
@@ -39,9 +57,38 @@
   }
 }
 
+.button {
+
+}
+.button img {
+  object-fit: cover;
+  padding: 0 36% 0 36%;
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+  
+  
+}
+.button img:hover {
+ transform: scale(1.2);
+ transition: transform 0.5s;
+ filter: drop-shadow(0 0 1rem #61dafbaa)
+} 
+
+.link:hover {
+  transform: scale(1.2);
+ transition: transform 0.5s;
+ filter: drop-shadow(0 0 1rem #61dafbaa)
+ filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+
+}
+
+
 /* Media queries para diferentes tamaños de pantalla */
 @media (max-width: 1200px) {
-  .tec-icon {
+  .project {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    /* a img {
+      width: 25rem;
+    } */
   }
 }
 
@@ -49,12 +96,32 @@
   .project {
     grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
     grid-template-columns: repeat(2, minmax(30rem, 2fr));
+
+    a {
+      width: 22rem;
+    }
+
+    img {
+      width: 18.75rem;
+      margin: 2%;
+    }
+
   }
 }
 
 @media (max-width: 920px) {
   .project {
+    grid-template-rows: repeat(auto-fill, minmax(15rem, fr));
     grid-template-columns: repeat(2, minmax(15rem, 1fr));
+
+    a {
+      width: 22rem;
+    }
+
+    img {
+      width: 18.75rem;
+      margin: 2%;
+    }
 
     div {
       margin: 0;
@@ -71,11 +138,20 @@
 @media (max-width: 480px) {
   .project {
     grid-template-columns: repeat(1, minmax(13rem, 2fr));
+
+    a {
+      width: 18rem;
+    }
+
+    img {
+      width: 15rem;
+    }
   }
 }
 
 @media (max-width: 360px) {
   .project {
     grid-template-columns: repeat(1, minmax(10rem, 1fr));
-  }
+
+  
 }

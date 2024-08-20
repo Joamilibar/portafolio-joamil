@@ -3,61 +3,44 @@ import "./styles/projects.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import github from "../assets/img/github.svg";
 
 function Projects() {
   return (
     <>
-      {/* <div>
-        <section className="section-body">
-          <div>
-            <div className="project">
-              {projects.map((project) => (
-                <a href={project.link} key={project.image} className="">
-                  <div>
-                    <article className="article-items">
-                      <div>
-                        <div>
-                          <img src={project.image} className="" alt="photo" />
-                        </div>
-                        <h2>Title: {project.title}</h2>
-                        <h3>Subtitle: {project.subtitle}</h3>
-                        <p>Description: {project.description}</p>
-                        <h3>Tecnologies: {project.tecnologies}</h3>
-                        <h3>Repositorie: {project.repositorie}</h3>
-                        <h3>www: {project.www}</h3>
-                      </div>
-                    </article>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div></div>
-          <div></div>
-        </section>
-      </div> */}
       <Container>
         <Row>
           <Col>
             <div className="project">
               {projects.map((project) => (
-                <a href={project.www} key={project.image} className="">
+                <a key={project.image} target="_blank">
                   <div>
                     <article className="article-items">
                       <div>
                         <div>
-                          <img src={project.image} className="" alt="photo" />
+                          <img
+                            href={project.www}
+                            src={project.image}
+                            className="link"
+                            alt="photo"
+                          />
                         </div>
                         <div>
-                          <h2>Title: {project.title}</h2>
+                          <h2>{project.title}</h2>
                           <h3>{project.subtitle}</h3>
-                          <p>Description: {project.description}</p>
-                          <h3>Tecnologies: </h3>
+                          <p>{project.description}</p>
+                          <h3>Tecnologies </h3>
                           <p>{project.tecnologies}</p>
-                          <h3>Repositorie: </h3>
-                          <p>{project.repositorie}</p>
-                          <h3>www: {project.www}</h3>
+                          <h3> - www - </h3>
+                          <p href={project.www} className="link">
+                            {project.www}
+                          </p>
+                          <h3>Github </h3>
+                          <span className="button">
+                            <p>{project.repositorie}</p>
+                            <img src={github} className="" alt="Logo GitHub" />
+                          </span>
                         </div>
                       </div>
                     </article>
