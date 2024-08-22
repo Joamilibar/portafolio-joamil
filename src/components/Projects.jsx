@@ -88,7 +88,7 @@ function Projects() {
             </Card.Text>
             <Card.Link
               variant="primary"
-              href="https://www.linkedin.com/in/joamilibar/"
+              href="https://www.linkedin.com/in/joamil-ibarra?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               target="_blank"
               rel="noopener noreferrer"
             >
