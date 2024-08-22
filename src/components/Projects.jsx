@@ -1,76 +1,107 @@
+import React, { useState } from "react";
 import { projects } from "../data/data.js";
 import "./styles/projects.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import github from "../assets/img/github.svg";
 
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
+
 function Projects() {
+  const [products, setProducts] = useState(projects);
+
+  const renderProject = (project) => {
+    const {
+      title,
+      subtitle,
+      description,
+      tecnologies,
+      image,
+      www,
+      repositorie,
+    } = project;
+
+    return (
+      <Col key={image} md={4}>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={image} />
+          <Card.Body>
+            <Card.Title>
+              <strong>{title}</strong>
+            </Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+              {subtitle}
+            </Card.Subtitle>
+            <Card.Text>{description}</Card.Text>
+          </Card.Body>
+          <ListGroup variant="flush">
+            <ListGroup.Item>{tecnologies}</ListGroup.Item>
+            <ListGroup.Item>
+              <Card.Link href={www} target="_blank" rel="noopener noreferrer">
+                Website
+              </Card.Link>
+            </ListGroup.Item>
+          </ListGroup>
+          <Card.Body>
+            <Card.Link
+              href={repositorie}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <a href={repositorie} target="_blank" rel="noopener noreferrer">
+                <img src={github} className="button link" alt="Logo GitHub" />
+                {""}
+              </a>
+            </Card.Link>
+            <Card.Link
+              href={repositorie}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub{" "}
+            </Card.Link>
+          </Card.Body>
+        </Card>
+      </Col>
+    );
+  };
+
   return (
-    <>
-      <Container>
-        <Row>
-          <Col>
-            <div className="project">
-              {projects.map((project) => (
-                <div
-                  className="card"
-                  key={project.image}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div>
-                    <article className="article-items">
-                      <div href={project.www} target="_blank">
-                        <img
-                          href={project.www}
-                          src={project.image}
-                          className="link"
-                          alt="photo"
-                          target="_blank"
-                        />
-                      </div>
-                      <div>
-                        <h2>{project.title}</h2>
-                        <h3>{project.subtitle}</h3>
-                        <p>{project.description}</p>
-                        <h3>Tecnologies </h3>
-                        <p>{project.tecnologies}</p>
-                        <h3> - www - </h3>
-                        <a href={project.www} target="_blank">
-                          {" "}
-                          <p href="" target className="link">
-                            {project.www}
-                          </p>
-                        </a>
-                        <h3>Github </h3>
-                        <div
-                          href={project.repositorie}
-                          className="button-container"
-                        >
-                          <Button
-                            href={project.repositorie}
-                            target="_blanc"
-                            className=" link"
-                          >
-                            <img
-                              src={github}
-                              className="button "
-                              alt="Logo GitHub"
-                            />
-                          </Button>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <Container>
+      <Row>
+        <Card className="text-center">
+          <Card.Header></Card.Header>
+          <Card.Body>
+            <Card.Title>Personal Intro</Card.Title>
+            <Card.Text>
+              My name is Joamil Ibarra. I am a senior IT technician junior full
+              stack developer, gaining experience in different technologies such
+              as HTML, CSS, JavaScript, ReactJs, NodeJs, Express, MongoDb. I
+              describe myself as a proactive person, flexible to changes, in
+              constant self-development, initiative and curiosity to constantly
+              learn. Passionate about process automation and problem solving.
+              Ability to accept challenges. Great collaborative spirit and
+              teamwork. Strong analytical and results-oriented skills. Eager for
+              continue growing professionally.
+            </Card.Text>
+            <Card.Link
+              variant="primary"
+              href="https://www.linkedin.com/in/joamilibar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </Card.Link>
+          </Card.Body>
+          <Card.Footer className="text-muted"></Card.Footer>
+        </Card>
+      </Row>
+      <Row>
+        <Col className="section-container">{products.map(renderProject)}</Col>
+      </Row>
+    </Container>
   );
 }
 

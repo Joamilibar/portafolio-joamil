@@ -4,7 +4,7 @@ export const projects = [
     "title": "Bed & Dreams",
     "subtitle": "Proyecto Desarrollador Web",
     "description": "Sitio web estático prototipo de tienda de ropa de cama ",
-    "tecnologies": "HTML 5,CSS 3, SASS, Bootstrap, Git",
+    "tecnologies": "HTML 5,CSS 3, SASS, Bootstrap, Responsive, Git",
     "image": "https://raw.githubusercontent.com/Joamilibar/proyecto_dw/main/assets/img/README/header.png",
     "repositorie": "https://github.com/Joamilibar/proyecto_dw.git",
     "www": "https://proyecto-dw-three.vercel.app/"
