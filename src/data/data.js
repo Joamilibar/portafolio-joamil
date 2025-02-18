@@ -28,7 +28,7 @@ export const projects = [
     "image": "https://raw.githubusercontent.com/Joamilibar/backend_70065/main/src/public/img/Consigna-02.webp",
     "repositorie": "https://github.com/Joamilibar/backend_70065.git",
     "www": " "
-  }
+  },
   {
    "id": 4,
     "title": "Carrito y Productos con MongoDB",
