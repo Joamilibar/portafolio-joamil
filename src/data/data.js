@@ -21,13 +21,23 @@ export const projects = [
   },
   {
     "id": 3,
-    "title": "Proyecto Final Backend Avanzado I",
-    "subtitle": "Api con mongoDB",
+    "title": "Api con mongoDB",
+    "subtitle": "Proyecto Final Backend Avanzado I",
     "description": "Api donde aplique conociemintos para crear CRUD de productos y carrito de compras, vistas con handlebars, persistencia con fs y mongoodb, socket.io para vista en tiempo real",
-    "tecnologies": "Node.js, ExpressJS, express-handlebars, socket.io, Mongoose, Mongoose-paginate-v2, Git",
+    "tecnologies": "Node.js, ExpressJS, express-handlebars, socket.io, Mongoose, Mongoose-paginate-v2, Git"
     "image": "https://raw.githubusercontent.com/Joamilibar/backend_70065/main/src/public/img/Consigna-02.webp",
     "repositorie": "https://github.com/Joamilibar/backend_70065.git",
     "www": " "
+  }
+  {
+   "id": 4,
+    "title": "Carrito y Productos con MongoDB",
+    "subtitle": "Proyecto Final Backend Avanzado II",
+    "description": "Consultas de carritos y los productos que contiene con filtros, paginación y ordenamiento",
+    "tecnologies": "Node.js, ExpressJS, express-handlebars, socket.io, MongoDB, Git, passport, JWT, bcrypt,",
+    "image": "https://raw.githubusercontent.com/Joamilibar/backend-II-final/refs/heads/main/src/public/img/Consigna-02.webp",
+    "repositorie": "https://github.com/Joamilibar/backend-II-final.git",
+    "www": "" 
   }
   // {
   //   "id": 4,
