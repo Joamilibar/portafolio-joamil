@@ -37,7 +37,7 @@ export const projects = [
     "tecnologies": "Node.js, ExpressJS, express-handlebars, socket.io, MongoDB, Git, passport, JWT, bcrypt,",
     "image": "https://raw.githubusercontent.com/Joamilibar/backend-II-final/refs/heads/main/src/public/img/Consigna-02.webp",
     "repositorie": "https://github.com/Joamilibar/backend-II-final.git",
-    "www": "" 
+    "www": " " 
   }
   // {
   //   "id": 4,
