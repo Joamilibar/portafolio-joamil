@@ -19,8 +19,8 @@ function App() {
               <img src={fondo} alt="Fondo" className="background" />
               <div className="overlay">
                 <svg src={avatar} alt="avatar" className="avatar">
-                </svg>
                 <img src={avatar} alt="avatar" className="avatar" />
+                </svg>
                 <div className="titulo">
                   <h1>Full Stack Developer</h1>
                   <h2>Joamil Ibarra</h2>
