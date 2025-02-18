@@ -17,10 +17,8 @@ function App() {
           <Col>
             <div className="container">
               <img src={fondo} alt="Fondo" className="background" />
-              <div className="overlay">
-                <svg>
-                <img src={avatar} alt="avatar" className="avatar" />
-                </svg>
+              <div className="overlay">                
+                <img src={avatar} alt="avatar" className="avatar" />                
                 <div className="titulo">
                   <h1>Full Stack Developer</h1>
                   <h2>Joamil Ibarra</h2>
