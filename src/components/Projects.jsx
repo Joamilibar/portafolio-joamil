@@ -1,19 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { projects } from "../data/data.js";
 import "./styles/projects.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import github from "../assets/img/github.svg";
 
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-
 function Projects() {
-  const [products, setProducts] = useState(projects);
-
-  const renderProject = (project) => {
+  const renderProject = (project, index) => {
     const {
+      id,
       title,
       subtitle,
       description,
@@ -23,85 +16,70 @@ function Projects() {
       repositorie,
     } = project;
 
+    const techArray = tecnologies.split(",").map(tech => tech.trim());
+
     return (
-      <Col key={image} md={4}>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body>
-            <Card.Title>
-              <strong>{title}</strong>
-            </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              {subtitle}
-            </Card.Subtitle>
-            <Card.Text>{description}</Card.Text>
-          </Card.Body>
-          <ListGroup variant="flush">
-            <ListGroup.Item>{tecnologies}</ListGroup.Item>
-            <ListGroup.Item>
-              <Card.Link href={www} target="_blank" rel="noopener noreferrer">
-                Website
-              </Card.Link>
-            </ListGroup.Item>
-          </ListGroup>
-          <Card.Body>
-            <Card.Link
-              href={repositorie}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <a href={repositorie} target="_blank" rel="noopener noreferrer">
-                <img src={github} className="button link" alt="Logo GitHub" />
-                {""}
+      <article
+        key={id}
+        className="project-card"
+        style={{ animationDelay: `${index * 0.15}s` }}
+      >
+        <div className="project-image-container">
+          <img src={image} alt={title} className="project-image" />
+          <div className="project-overlay">
+            <div className="project-links">
+              {www && www.trim() !== "" && (
+                <a
+                  href={www}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                  title="Ver Demo"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Demo</span>
+                </a>
+              )}
+              <a
+                href={repositorie}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+                title="Ver Código"
+              >
+                <img src={github} alt="GitHub" className="github-icon" />
+                <span>Código</span>
               </a>
-            </Card.Link>
-            <Card.Link
-              href={repositorie}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub{" "}
-            </Card.Link>
-          </Card.Body>
-        </Card>
-      </Col>
+            </div>
+          </div>
+        </div>
+
+        <div className="project-content">
+          <span className="project-category">{subtitle}</span>
+          <h3 className="project-title">{title}</h3>
+          <p className="project-description">{description}</p>
+
+          <div className="project-tech-stack">
+            {techArray.slice(0, 5).map((tech, i) => (
+              <span key={i} className="tech-tag">{tech}</span>
+            ))}
+            {techArray.length > 5 && (
+              <span className="tech-tag tech-more">+{techArray.length - 5}</span>
+            )}
+          </div>
+        </div>
+      </article>
     );
   };
 
   return (
-    <Container>
-      <Row>
-        <Card className="text-center">
-          <Card.Header></Card.Header>
-          <Card.Body>
-            <Card.Title>Personal Intro</Card.Title>
-            <Card.Text>
-              My name is Joamil Ibarra. I am a senior IT technician junior full
-              stack developer, gaining experience in different technologies such
-              as HTML, CSS, JavaScript, ReactJs, NodeJs, Express, MongoDb. I
-              describe myself as a proactive person, flexible to changes, in
-              constant self-development, initiative and curiosity to constantly
-              learn. Passionate about process automation and problem solving.
-              Ability to accept challenges. Great collaborative spirit and
-              teamwork. Strong analytical and results-oriented skills. Eager for
-              continue growing professionally.
-            </Card.Text>
-            <Card.Link
-              variant="primary"
-              href="https://www.linkedin.com/in/joamil-ibarra?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </Card.Link>
-          </Card.Body>
-          <Card.Footer className="text-muted"></Card.Footer>
-        </Card>
-      </Row>
-      <Row>
-        <Col className="section-container">{products.map(renderProject)}</Col>
-      </Row>
-    </Container>
+    <div className="projects-grid">
+      {projects.map(renderProject)}
+    </div>
   );
 }
 

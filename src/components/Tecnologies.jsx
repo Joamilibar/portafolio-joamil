@@ -8,36 +8,41 @@ import nodejs from "../assets/img/nodejs.svg";
 import mongodb from "../assets/img/mongodb.svg";
 import "./styles/tecnologies.css";
 
+const technologies = [
+  { name: "HTML5", icon: html, category: "Frontend" },
+  { name: "CSS3", icon: css, category: "Frontend" },
+  { name: "Sass", icon: sass, category: "Frontend" },
+  { name: "Bootstrap", icon: bootstrap, category: "Frontend" },
+  { name: "JavaScript", icon: js, category: "Language" },
+  { name: "React", icon: react, category: "Frontend" },
+  { name: "Node.js", icon: nodejs, category: "Backend" },
+  { name: "MongoDB", icon: mongodb, category: "Database" },
+];
+
 function Tecnologies() {
   return (
-    <>
-      <div className="tec-icon">
-        <div>
-          <img src={html} className="icon" alt="Logo Html" />
-        </div>
-        <div>
-          <img src={css} className="icon" alt="Logo CSS" />
-        </div>
-        <div>
-          <img src={sass} className="icon" alt="Logo Sass" />
-        </div>
-        <div>
-          <img src={bootstrap} className="icon" alt="Logo Bootstrap" />
-        </div>
-        <div>
-          <img src={js} className="icon" alt="Logo JavaScript" />
-        </div>
-        <div>
-          <img src={react} className="icon" alt="Logo React" />
-        </div>
-        <div>
-          <img src={nodejs} className="icon" alt="Logo NodJS" />
-        </div>
-        <div>
-          <img src={mongodb} className="icon" alt="Logo MongoDB" />
-        </div>
+    <div className="tech-container">
+      <div className="tech-grid">
+        {technologies.map((tech, index) => (
+          <div
+            key={tech.name}
+            className="tech-card"
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <div className="tech-icon-wrapper">
+              <img
+                src={tech.icon}
+                className="tech-icon"
+                alt={`${tech.name} logo`}
+              />
+              <div className="tech-glow"></div>
+            </div>
+            <span className="tech-name">{tech.name}</span>
+            <span className="tech-category">{tech.category}</span>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 
