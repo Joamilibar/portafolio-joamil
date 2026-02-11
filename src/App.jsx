@@ -272,6 +272,27 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Extra Sections after Footer - Technologies & Projects reprise */}
+      <section className="section skills-section footer-extra-section">
+        <div className="container">
+          <h2 className="section-title">Stack Tecnológico</h2>
+          <p className="section-subtitle">
+            Herramientas con las que trabajo día a día
+          </p>
+          <Tecnologies />
+        </div>
+      </section>
+
+      <section className="section projects-section footer-extra-section">
+        <div className="container">
+          <h2 className="section-title">Más Proyectos</h2>
+          <p className="section-subtitle">
+            Explora mi trabajo y conoce lo que puedo hacer por tu equipo
+          </p>
+          <Projects />
+        </div>
+      </section>
     </div>
   );
 }
