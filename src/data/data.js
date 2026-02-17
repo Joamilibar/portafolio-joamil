@@ -55,7 +55,7 @@ export const projects = [
     "subtitle": "Web App para Adopción de Mascotas",
     "description": "Aplicación web para la adopción de mascotas, donde se pueden ver las mascotas disponibles para adopción, edad, su raza, lugar de origen, etc.",
     "tecnologies": "Node.js, ExpressJS, @faker-js, MongoDB, Git, passport, JWT, bcrypt, dotenv, jsonwebtoken, chai, jest, mocha, supertest, swagger  ",
-    "image": "https://raw.githubusercontent.com/Joamilibar/pets-adoption/refs/heads/main/src/public/img/logo.png",
+    "image": "https://github.com/Joamilibar/pets-adoption/blob/main/frontend/image.png?raw=true",
     "repositorie": "https://github.com/Joamilibar/pets-adoption.git",
     "www": "https://pets-adoption-kappa.vercel.app/login"
   }
