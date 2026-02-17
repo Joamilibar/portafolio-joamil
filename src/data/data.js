@@ -30,16 +30,16 @@ export const projects = [
     "www": " "
   },
   {
-   "id": 4,
+    "id": 4,
     "title": "Carrito y Productos con MongoDB",
     "subtitle": "Proyecto Final Backend Avanzado II",
     "description": "Consultas de carritos y los productos que contiene con filtros, paginación y ordenamiento.",
     "tecnologies": "Node.js, ExpressJS, express-handlebars, socket.io, MongoDB, Git, passport, JWT, bcrypt.",
     "image": "https://raw.githubusercontent.com/Joamilibar/backend-II-final/refs/heads/main/src/public/img/Consigna-02.webp",
     "repositorie": "https://github.com/Joamilibar/backend-II-final.git",
-    "www": " " 
+    "www": " "
   },
-   {
+  {
     "id": 5,
     "title": "Backend App Adopción Mascotas",
     "subtitle": "Proyecto Final Backend Avanzado III",
@@ -48,6 +48,16 @@ export const projects = [
     "image": "https://raw.githubusercontent.com/Joamilibar/backend_III_Final/refs/heads/main/src/public/img/Dockerhub-imagen.png",
     "repositorie": "https://github.com/Joamilibar/backend_III_Final.git",
     "www": "https://"
+  },
+  {
+    "id": 6,
+    "title": "Pets Adoption",
+    "subtitle": "Web App para Adopción de Mascotas",
+    "description": "Aplicación web para la adopción de mascotas, donde se pueden ver las mascotas disponibles para adopción, edad, su raza, lugar de origen, etc.",
+    "tecnologies": "Node.js, ExpressJS, @faker-js, MongoDB, Git, passport, JWT, bcrypt, dotenv, jsonwebtoken, chai, jest, mocha, supertest, swagger  ",
+    "image": "https://raw.githubusercontent.com/Joamilibar/pets-adoption/refs/heads/main/src/public/img/logo.png",
+    "repositorie": "https://github.com/Joamilibar/pets-adoption.git",
+    "www": "https://pets-adoption-kappa.vercel.app/login"
   }
   // {
   //   "id": 4,
